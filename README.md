@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+[![Build Status](https://travis-ci.org/iHavee/iHavee.github.io.svg?branch=sources)](https://travis-ci.org/iHavee/iHavee.github.io)
 
-You can use the [editor on GitHub](https://github.com/jerofree/jerofree.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Generic
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### require:
 
-### Markdown
+- jekyll >= 3.0.3
+- jekyll-paginate >= 1.1.0
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Create new post
 
-```markdown
-Syntax highlighted code block
+    rake post title='A Title'
+    or
+    rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
 
-# Header 1
-## Header 2
-### Header 3
+#### Create new page
 
-- Bulleted
-- List
+    rake page name='about.html'
 
-1. Numbered
-2. List
+#### Define your color
 
-**Bold** and _Italic_ and `Code` text
+Edit the file:  `assets/_sass/_custom.scss`
 
-[Link](url) and ![Image](src)
-```
+#### Use qiniu cdn
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    rake qrsync
 
-### Jekyll Themes
+Then, follow tips to do
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jerofree/jerofree.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Docker Compose
 
-### Support or Contact
+    docker-compose up -d
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Create new post
+
+    docker exec -ti jekyll rake post title='A Title'
+    or
+    docker exec -ti jekyll rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+    ...
+
+#### License
+
+- The Font Awesome font is licensed under the [SIL OFL 1.1](http://scripts.sil.org/OFL)
+- Font Awesome CSS, LESS, and SASS files are licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
+- Bootstrap is licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
+- Jekyll is licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
