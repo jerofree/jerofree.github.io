@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "两列固定宽度"
 category: css

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "两列宽度自适应"
 category: css
