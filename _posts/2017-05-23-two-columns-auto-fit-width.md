@@ -1,11 +1,11 @@
 ﻿---
 layout: post
-title:  "两列固定宽度"
+title:  "两列宽度自适应"
 category: css
 tags: [css,div]
 ---
 
-## 两列固定宽度
+## 两列宽度自适应
 
 ```
 <!DOCTYPE html>
@@ -17,14 +17,14 @@ tags: [css,div]
         #left{
             background-color: #cccccc;
             border:2px solid #333333;
-            width: 300px;
+            width: 20%;
             height: 300px;
             float: left;
         }
         #right{
             background-color: #cccccc;
             border:2px solid #333333;
-            width: 300px;
+            width: 70%;
             height: 300px;
             float: left;
         }
