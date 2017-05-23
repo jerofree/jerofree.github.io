@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "一列宽度自适应"
 category: demo
