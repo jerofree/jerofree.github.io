@@ -4,6 +4,7 @@ title:  "一列固定宽度"
 category: css
 tags: [css, div]
 ---
+
 ## 一列固定宽度
 
 ```ruby
