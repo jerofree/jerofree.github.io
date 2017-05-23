@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "三列浮动中间宽度自适应"
 category: css
