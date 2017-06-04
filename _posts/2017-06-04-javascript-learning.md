@@ -18,12 +18,12 @@ tags: [类型, 值, 变量]
 
 ### 不可变的原始值和可变的对象引用
 ```
-var s="hello world";
-console.log( s.toUpperCase());返回HELLO WORLD,但并没有改变s的值。
-console.log(s);返回 hello world
+	var s="hello world";
+	console.log( s.toUpperCase());返回HELLO WORLD,但并没有改变s的值。
+	console.log(s);返回 hello world
 
 
-var a=[];  javascript中数组也是对象，对象为引用类型，对象值都是引用，对象的比较均是引用的比较，当且仅当他们引用同一个基对象时，他们才相等。
+	var a=[];  javascript中数组也是对象，对象为引用类型，对象值都是引用，对象的比较均是引用的比较，当且仅当他们引用同一个基对象时，他们才相等。
 	var b=a;
 	b[0]=1;
 	console.log(a)
