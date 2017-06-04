@@ -1,4 +1,4 @@
-	--
+---
 layout: post
 title:  "javascript学习!"
 category: javasctipt learning
@@ -16,7 +16,7 @@ tags: [类型, 值, 变量]
 	
 ```
 
-###不可变的原始值和可变的对象引用
+### 不可变的原始值和可变的对象引用
 ```
 var s="hello world";
 console.log( s.toUpperCase());返回HELLO WORLD,但并没有改变s的值。
