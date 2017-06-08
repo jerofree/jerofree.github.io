@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "border-radious使用!"
+title:  "box-shadow使用!"
 category: css3
-tags: [css3,border-radious]
+tags: [css3,box-shadow]
 ---
 
 ### box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式];注意：inset 可以写在参数的第一个或最后一个，其它位置是无效的。
@@ -37,3 +37,4 @@ tags: [css3,border-radious]
 </html>
 ```
 
+![image](/images/2017-06-08-box-shadow.PNG)
