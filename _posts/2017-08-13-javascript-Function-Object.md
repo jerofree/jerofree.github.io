@@ -4,7 +4,7 @@ title:  "javascript之Function与Object"
 category: javascript
 tags: [Function,Object]
 ---
-##理解Function instanceof Object与Object instanceof Function都为true
+##	理解Function instanceof Object与Object instanceof Function都为true
 - - -
 ```javascript
 1、Function.__proto__==Function.prototype  //Function本身继承了Function的原型
