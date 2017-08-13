@@ -4,7 +4,6 @@ title:  "ES6扩展运算符（ spread ）是三个点（...）"
 category: ES6扩展运算符
 tags: [css]
 ---
-###
 - - -
 ```javascript
 ###	复制数组：A：循环, B:Array.from  C: var arr2=[...arr]; 
@@ -21,7 +20,7 @@ Note: 复制数组时候, 拓展语句只会进行浅复制, 因此如下所示,
 ```javascript
 1  含义
 扩展运算符（ spread ）是三个点（...）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。
-[javascript] view plain copy
+
 console.log(...[1, 2, 3])  
 // 1 2 3  
 console.log(1, ...[2, 3, 4], 5)  
@@ -41,7 +40,7 @@ var numbers = [4, 38];
 add(...numbers) // 42  
 上面代码中，array.push(...items)和add(...numbers)这两行，都是函数的调用，它们的都使用了扩展运算符。该运算符将一个数组，变为参数序列。
 扩展运算符与正常的函数参数可以结合使用，非常灵活。
-[javascript] view plain copy
+
 function f(v, w, x, y, z) { }  
 var args = [0, 1];  
 f(-1, ...args, 2, ...[3]);  
@@ -49,7 +48,6 @@ f(-1, ...args, 2, ...[3]);
 2  替代数组的 apply 方法
 
 由于扩展运算符可以展开数组，所以不再需要apply方法，将数组转为函数的参数了。
-[javascript] view plain copy
 // ES5 的写法  
 function f(x, y, z) {  
 // ...  
@@ -71,7 +69,6 @@ Math.max(...[14, 3, 77])
 Math.max(14, 3, 77);  
 上面代码表示，由于 JavaScript 不提供求数组最大元素的函数，所以只能套用Math.max函数，将数组转为一个参数序列，然后求最大值。有了扩展运算符以后，就可以直接用Math.max了。
 另一个例子是通过push函数，将一个数组添加到另一个数组的尾部。
-[javascript] view plain copy
 // ES5 的写法  
 var arr1 = [0, 1, 2];  
 var arr2 = [3, 4, 5];  
@@ -82,7 +79,6 @@ var arr2 = [3, 4, 5];
 arr1.push(...arr2);  
 上面代码的 ES5 写法中，push方法的参数不能是数组，所以只好通过apply方法变通使用push方法。有了扩展运算符，就可以直接将数组传入push方法。
 下面是另外一个例子。
-[javascript] view plain copy
 // ES5  
 new (Date.bind.apply(Date, [null, 2015, 1, 1]))  
 // ES6  
@@ -91,7 +87,6 @@ new Date(...[2015, 1, 1]);
 3  扩展运算符的应用
 （ 1 ）合并数组
 扩展运算符提供了数组合并的新写法。
-[javascript] view plain copy
 // ES5  
 [1, 2].concat(more)  
 // ES6  
@@ -108,7 +103,6 @@ arr1.concat(arr2, arr3);
 
 （ 2 ）与解构赋值结合
 扩展运算符可以与解构赋值结合起来，用于生成数组。
-[javascript] view plain copy
 // ES5  
 a = list[0], rest = list.slice(1)  
 // ES6  
@@ -131,27 +125,25 @@ const [first, ...middle, last] = [1, 2, 3, 4, 5];
 //  报错  
 （ 3 ）函数的返回值
 JavaScript 的函数只能返回一个值，如果需要返回多个值，只能返回数组或对象。扩展运算符提供了解决这个问题的一种变通方法。
-[javascript] view plain copy
 var dateFields = readDateFields(database);  
 var d = new Date(...dateFields);  
 上面代码从数据库取出一行数据，通过扩展运算符，直接将其传入构造函数Date。
 （ 4 ）字符串
 扩展运算符还可以将字符串转为真正的数组。
-[javascript] view plain copy
 [...'hello']  
 // [ "h", "e", "l", "l", "o" ]  
 上面的写法，有一个重要的好处，那就是能够正确识别 32 位的 Unicode 字符。
-[javascript] view plain copy
+
 'x\uD83D\uDE80y'.length // 4  
 [...'x\uD83D\uDE80y'].length // 3  
 上面代码的第一种写法， JavaScript 会将 32 位 Unicode 字符，识别为 2 个字符，采用扩展运算符就没有这个问题。因此，正确返回字符串长度的函数，可以像下面这样写。
-[javascript] view plain copy
+
 function length(str) {  
 return [...str].length;  
 }  
 length('x\uD83D\uDE80y') // 3  
 凡是涉及到操作 32 位 Unicode 字符的函数，都有这个问题。因此，最好都用扩展运算符改写。
-[javascript] view plain copy
+
 let str = 'x\uD83D\uDE80y';  
 str.split('').reverse().join('')  
 // 'y\uDE80\uD83Dx'  
@@ -177,7 +169,7 @@ let arr = [...arrayLike];
 上面代码中，arrayLike是一个类似数组的对象，但是没有部署 Iterator 接口，扩展运算符就会报错。这时，可以改为使用Array.from方法将arrayLike转为真正的数组。
 （ 6 ） Map 和 Set 结构， Generator 函数
 扩展运算符内部调用的是数据结构的 Iterator 接口，因此只要具有 Iterator 接口的对象，都可以使用扩展运算符，比如 Map 结构。
-[javascript] view plain copy
+
 let map = new Map([  
 [1, 'one'],  
 [2, 'two'],  
@@ -185,7 +177,7 @@ let map = new Map([
 ]);  
 let arr = [...map.keys()]; // [1, 2, 3]  
 Generator 函数运行后，返回一个遍历器对象，因此也可以使用扩展运算符。
-[javascript] view plain copy
+
 var go = function*(){  
 yield 1;  
 yield 2;  
@@ -194,7 +186,7 @@ yield 3;
 [...go()] // [1, 2, 3]  
 上面代码中，变量go是一个 Generator 函数，执行后返回的是一个遍历器对象，对这个遍历器对象执行扩展运算符，就会将内部遍历得到的值，转为一个数组。
 如果对没有iterator接口的对象，使用扩展运算符，将会报错。
-[javascript] view plain copy
+
 var obj = {a: 1, b: 2};  
 let arr = [...obj]; // TypeError: Cannot spread non-iterable object  
 ```
