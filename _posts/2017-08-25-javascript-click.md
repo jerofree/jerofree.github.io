@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "click与onclick的区别"
-category:javascript
+category: javascript
 tags: [javascript]
 ---
 ###	原生javascript的click在w3c里边的阐述是DOM button对象，也是html DOM click() 方法，可模拟在按钮上的一次鼠标单击。
