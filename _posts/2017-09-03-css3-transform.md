@@ -4,7 +4,7 @@ title:  "css3 transform"
 category: css3
 tags: [transform]
 ---
-###	css draft定义transformable element（行内元素不可不transformable ）
+###	css draft定义transformable element（行内元素不是transformable的 ）
 	When used in this specification, terms have the meanings assigned in this section.
 	
 	transformable element
