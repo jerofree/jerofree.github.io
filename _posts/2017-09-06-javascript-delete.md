@@ -12,7 +12,8 @@ tags: [javascript 属性删除]
 	delete a.p	//这段代码执行完后b.x的值仍然是1，对象属于引用类型，这里能访问b.x也是正常。
 	delete Object.prototype //false
 	Object.getOwnPropertyDescriptor(Object,'prototype')
-	//上句返回 Object {value: Object, writable: false, enumerable: false, configurable: false}不可写，不可枚举，不可配置
+	//上句返回 Object {value: Object, writable: false, enumerable: false, configurable: false}
+	//不可写，不可枚举，不可配置
 	var x=1;//申明一个全局变量
 	delete this.x;//不能删除这个属性
 	（function(){
