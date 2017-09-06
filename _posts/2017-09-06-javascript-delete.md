@@ -27,7 +27,7 @@ tags: [javascript 属性删除]
 	
 	eval中通过var 定义的变量可以被删除掉。
 	当delete表达式删除成功或者没有任何副作用时候它返回true.
-	```
+```
 ## 当时数组的时候delete 成功了，但是数组对应的位置变为undefined,数组的长度不变。
 	f=[1,2,3]
 	delete f[1] //返回true
