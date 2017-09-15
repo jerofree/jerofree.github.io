@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JQuery学习"
-category:JQuery学习
+category: JQuery学习
 tags: [JQuery]
 ---
 ## 	我们有几种方式可以隐藏一个元素：
